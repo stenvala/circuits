@@ -1,0 +1,84 @@
+\pspicture*(-5.5,-2.1)(5.5,2.3)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-3,-2){A1}
+\pnode(-3,0){B1}
+\pnode(-3,2){C1}
+
+\pnode(0,-2){A2}
+\pnode(0,0){B2}
+
+\pnode(3,-2){A3}
+\pnode(3,0){B3}
+\pnode(3,2){C3}
+
+\resistor[intensity,
+intensitylabel=$I_1$,
+intensitylabeloffset=3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=-*,
+arrowscale=1.2 1.2,
+arrowinset=0](A1)(B1){}
+
+\resistor[intensity,
+intensitylabel=$I_2$,
+intensitylabeloffset=3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=*-*,
+arrowscale=1.2 1.2,
+arrowinset=0](A2)(B2){}
+
+\resistor[intensity,
+intensitylabel=$I_3$,
+intensitylabeloffset=3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=-*,
+arrowscale=1.2 1.2,
+arrowinset=0](A3)(B3){}
+
+\resistor[intensity,
+intensitylabel=$I_4$,
+intensitylabeloffset=3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=-*,
+arrowscale=1.2 1.2,
+arrowinset=0](B1)(B2){}
+
+\resistor[intensity,
+intensitylabel=$I_5$,
+intensitylabeloffset=3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=-*,
+arrowscale=1.2 1.2,
+arrowinset=0](B2)(B3){}
+
+\resistor[intensity,
+intensitylabel=$I_6$,
+intensitylabeloffset=-3mm,
+intensitycolor=red,
+directconvention=false,
+arrows=-,
+arrowscale=1.2 1.2,
+arrowinset=0](C1)(C3){}
+
+\wire(A1)(A3)
+\wire(B1)(C1)
+\wire(B3)(C3)
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(-1.5,-1.125){0.5}{45}{315}
+\rput[cm](-1.5,-1.125){$I_\alpha$}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(1.5,-1.125){0.5}{45}{315}
+\rput[cm](1.5,-1.125){$I_\beta$}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(0,1){0.5}{45}{315}
+\rput[cm](0,1){$I_\gamma$}
+
+\endpspicture

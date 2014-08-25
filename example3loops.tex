@@ -1,0 +1,71 @@
+\pspicture*(-5.5,-3.1)(5.5,1.1)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-3.75,-3){A1}
+\pnode(-3.75,0){B1}
+
+\pnode(-1.25,-3){A2}
+\pnode(-1.25,0){B2}
+\pnode(-1.25,1){C2}
+\pnode(-1.25,-1.5){AA2}
+
+\pnode(1.25,-3){A3}
+\pnode(1.25,0){B3}
+
+\pnode(3.75,-3){A4}
+\pnode(3.75,0){B4}
+\pnode(3.75,1){C4}
+
+\resistor[intensity,
+intensitylabel=$I_\alpha$,
+intensitylabeloffset=3mm,
+intensitycolor=olive,
+labeloffset=5mm,
+arrowscale=1.2 1.2,
+arrowinset=0](B1)(B2){$R_1$}
+
+\Ucc[labelInside=2,labeloffset=8mm](A1)(B1){$U_1$}
+\Ucc[labelInside=2,labeloffset=8mm](A2)(AA2){$U_2$}
+\Ucc[labelInside=2,labeloffset=8mm](A3)(B3){$U_3$}
+
+\resistor[intensity,
+intensitylabel=$I_\delta$,
+intensitylabeloffset=3mm,
+intensitycolor=olive,
+labeloffset=7mm,
+arrowscale=1.2 1.2,
+arrowinset=0](AA2)(B2){$R_2$}
+
+\resistor[intensity,
+intensitylabel=$I_\gamma$,
+intensitylabeloffset=3mm,
+intensitycolor=olive,
+labeloffset=7mm,
+arrowscale=1.2 1.2,
+arrowinset=0](A4)(B4){$R_4$}
+
+\resistor[intensity,
+intensitylabel=$I_\beta$,
+intensitylabeloffset=3mm,
+intensitycolor=olive,
+labeloffset=5mm,
+arrowscale=1.2 1.2,
+arrowinset=0](B2)(B3){$R_3$}
+
+\wire(A1)(A4)
+\wire(B2)(C2)
+\wire(C2)(C4)
+\wire(B4)(C4)
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(-2.5,-1.5){0.5}{45}{315}
+\rput[cm](-2.5,-1.5){$I_1$}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{->}(0,-1.5){0.5}{45}{315}
+\rput[cm](0,-1.5){$I_2$}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(2.5,0){0.5}{45}{315}
+\rput[cm](2.5,0){$I_3$}
+
+\endpspicture
