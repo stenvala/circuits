@@ -1,0 +1,71 @@
+\pspicture*(-5.5,-2.1)(5.5,3)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-3,-2){A1}
+\pnode(-3,0){B1}
+\pnode(-3,2){C1}
+
+\pnode(0,-2){A2}
+\pnode(0,0){B2}
+
+\pnode(3,-2){A3}
+\pnode(3,0){B3}
+\pnode(3,2){C3}
+
+\resistor[tensionlabel=$U_1$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowscale=1.2 1.2,
+arrowinset=0](A1)(B1){}
+
+\resistor[tensionlabel=$U_2$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowscale=1.2 1.2,
+arrowinset=0](A2)(B2){}
+
+\resistor[tensionlabel=$U_3$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowscale=1.2 1.2,
+arrowinset=0](A3)(B3){}
+
+\resistor[tensionlabel=$U_4$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowscale=1.2 1.2,
+arrowinset=0](B1)(B2){}
+
+\resistor[tensionlabel=$U_5$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowscale=1.2 1.2,
+arrowinset=0](B2)(B3){}
+
+\resistor[tensionlabel=$U_6$,
+tensionlabeloffset=8mm,
+tensionoffset = 5mm,
+tensioncolor=olive,
+arrowinset=0](C1)(C3){}
+
+\wire(A1)(A3)
+\wire(B1)(C1)
+\wire(B3)(C3)
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(-1.875,-1.125){0.5}{45}{315}
+\rput[cm](-1.875,-1.125){1}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(1.1375,-1.125){0.5}{45}{315}
+\rput[cm](1.1375,-1.125){2}
+
+\psarc[arrowscale=1.5 1.5, arrowinset=0,linecolor=violet]{<-}(0,1.125){0.5}{45}{315}
+\rput[cm](0,1.125){3}
+
+\endpspicture
