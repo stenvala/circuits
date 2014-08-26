@@ -1,0 +1,61 @@
+\pspicture*(-4.1,-5.1)(4,1.8)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\rput[cm](-0.5,1.35){A}
+\rput[cm](-0.5,-1.35){B}
+\psline{-o}(-2,-1)(-0.5,-1)
+\psline{-o}(-2,1)(-0.5,1)
+\psframe[fillstyle=solid,fillcolor=myLightGray,linewidth=0.2pt](-4,-1.5)(-2,1.5)
+
+\pnode(1,-1){A1}
+\pnode(2.5,-1){A2}
+
+\pnode(1,1){B1}
+\pnode(2.5,1){B2}
+
+\resistor[labeloffset=5mm,arrows=-o](B1)(B2){$R_{\rm T}$}
+
+\Ucc[labelInside=2,labeloffset=-8mm](A1)(B1){$U_{\rm T}$}
+
+\wire[arrows=-o](A1)(A2)
+
+\rput[cm](0,0){{\Large$\Rightarrow$}}
+
+\pcline[arrowscale=2 2,arrowinset=0]{->}(-0.5,0.8)(-0.5,-0.8)
+\bput{:U}{\rotatebox{90}{$U_0$}}
+
+\psellipticarc[arrowscale=2 2,arrowinset=0]{<-}(2.5,0)(0.5,0.8){270}{90}
+
+\rput[cm](3.5,0){$U_{\rm T}$}
+
+% other below
+
+\rput[cm](-0.5,-2.15){A}
+\rput[cm](-0.5,-4.85){B}
+\psline{-o}(-2,-4.5)(-0.5,-4.5)
+\psline{-o}(-2,-2.5)(-0.5,-2.5)
+\psframe[fillstyle=solid,fillcolor=myLightGray,linewidth=0.2pt](-4,-5)(-2,-2)
+
+\pnode(1,-4.5){A1}
+\pnode(2.5,-4.5){A2}
+
+\pnode(1,-2.5){B1}
+\pnode(2.5,-2.5){B2}
+
+\resistor[labeloffset=5mm,arrows=-o](B1)(B2){$R_{\rm T}$}
+
+\Ucc[labelInside=2,labeloffset=-8mm](A1)(B1){$U_{\rm T}$}
+
+\wire[arrows=-o](A1)(A2)
+
+\rput[cm](0,-3.5){{\Large$\Rightarrow$}}
+
+\pcline[arrowscale=2 2,arrowinset=0]{->}(-0.5,-3.5)(-1.5,-3.5)
+\bput{:U}{\rotatebox{180}{$R_{{\rm AB}}$}}
+
+\pcline[arrowscale=2 2,arrowinset=0]{->}(3.5,-3.5)(2.5,-3.5)
+\bput{:U}{\rotatebox{180}{$R_{\rm T}$}}
+
+\endpspicture
