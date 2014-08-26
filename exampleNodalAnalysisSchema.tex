@@ -1,0 +1,59 @@
+\pspicture*(-5.5,-1.1)(5.5,3.75)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-3,-1){A1}
+\pnode(-1,-1){A2}
+\pnode(1,-1){A3}
+\pnode(3,-1){A4}
+
+\pnode(-3,1){B1}
+\pnode(-1,1){B2}
+\pnode(1,1){B3}
+\pnode(3,1){B4}
+
+\pnode(-1,3){C2}
+\pnode(1,3){C3}
+
+\Ucc[labelInside=1,labeloffset=7mm,arrowscale=1.5 1.5,arrowinset=0](A1)(B1){$I_{\rm a}$}
+\Ucc[labelInside=1,labeloffset=7mm,arrowscale=1.5 1.5,arrowinset=0](A4)(B4){$I_{\rm c}$}
+\Ucc[labelInside=1,labeloffset=-8mm,arrowscale=1.5 1.5,arrowinset=0](C2)(C3){$I_{\rm b}$}
+
+\resistor[labeloffset=5mm,
+intensity,
+intensitylabel=$I_2$,
+intensitylabeloffset=3mm,
+arrowscale=1.5 1.5](B2)(B3){$R_2$}
+
+\resistor[labeloffset=6mm,
+intensity,
+intensitylabel=$I_1$,
+intensitylabeloffset=3mm,
+arrowscale=1.5 1.5](A2)(B2){$R_1$}
+
+\resistor[labeloffset=6mm,
+intensity,
+intensitylabel=$I_3$,
+intensitylabeloffset=-3mm,
+directconvention=false,
+arrowinset=0,
+arrowscale=1.5 1.5](A3)(B3){$R_3$}
+
+
+\wire(A1)(A4)
+\wire(B1)(B2)
+\wire(B3)(B4)
+\wire(B2)(C2)
+\wire(B3)(C3)
+
+\rput(0,-1){$\bullet$}
+\rput[bm](0,-0.9){\pscirclebox[framesep=1pt,linecolor=blue]{{\footnotesize 0}}}
+
+\rput(1,1){$\bullet$}
+\rput(-1,1){$\bullet$}
+\rput[cm](-1.4,1.4){\pscirclebox[framesep=1pt,linecolor=blue]{{\footnotesize $V_1$}}}
+\rput[cm](1.4,1.4){\pscirclebox[framesep=1pt,linecolor=blue]{{\footnotesize $V_2$}}}
+
+
+\endpspicture
