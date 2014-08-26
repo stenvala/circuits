@@ -1,0 +1,37 @@
+\pspicture*(-4.25,-2.1)(5.5,2.3)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+
+\rput[cm](-0.5,1.35){A}
+\rput[cm](-0.5,-1.35){B}
+\psline{-o}(-2,-1)(-0.5,-1)
+\psline{-o}(-2,1)(-0.5,1)
+\psframe[fillstyle=solid,fillcolor=myLightGray,linewidth=0.2pt](-4,-1.5)(-2,1.5)
+
+\pnode(2,-1){A1}
+\pnode(4,-1){A2}
+
+\pnode(2,1){B1}
+\pnode(4,1){B2}
+
+\pnode(5,1){B3}
+\pnode(5,-1){A3}
+
+\wire(A3)(A2)
+\wire(B3)(B2)
+\resistor[labeloffset=7mm](A3)(B3){$R_{\rm L}$}
+
+\resistor[labeloffset=5mm,arrows=-o](B1)(B2){$R_{\rm T}$}
+
+
+
+\Ucc[labelInside=2,labeloffset=-8mm](A1)(B1){$U_{\rm T}$}
+
+\wire[arrows=-o](A1)(A2)
+
+\rput[cm](0,0){{\Large$\rightarrow$}}
+
+
+\endpspicture

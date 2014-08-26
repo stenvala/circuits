@@ -1,0 +1,68 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+
+% ------------- ENCODING ------------- %
+
+%\usepackage[T1]{fontenc} % iso-8859-1
+\usepackage[utf8]{inputenc} % utf-8
+
+% ------------- PACKAGES ------------- %
+
+\usepackage{graphicx}
+\usepackage{amsmath}   
+\usepackage{color}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{pst-circ}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{xcolor,colortbl}
+%\usepackage{pstricks-add}
+%\usepackage{multimedia}
+%\usepackage{animate}
+%\usepackage{media9}
+
+\usepackage[english, finnish]{babel}
+
+% ------------- COMPILING PARAMETERS ------------- %
+\usepackage{ifthen}
+\newboolean{compleAnimations}
+\setboolean{compleAnimations}{true} % compile animations
+%\setboolean{compleAnimations}{false} % don't compile animations
+
+% ------------- MY COMMANDS ------------- %
+
+\definecolor{myLightBlue}{rgb}{0.68,0.85,0.9}
+\definecolor{myLightGray}{rgb}{0.85,0.85,0.85}
+\definecolor{myDarkGray}{rgb}{0.55,0.55,0.55}
+
+% ------------- ENUMERATIONS ------------- %
+
+\setbeamertemplate{enumerate subitem}{\Alph{enumii}}
+
+% ------------- HEADER & FOOTER ------------- %
+
+\setbeamertemplate{footline}[text line]{%
+\parbox{\linewidth}{\vspace*{-8pt}Kaikki piirit\hfill\insertframenumber/\inserttotalframenumber}}
+\setbeamertemplate{navigation symbols}{}
+
+\newenvironment{withoutheadline}{
+\setbeamertemplate{headline}[default]
+\setbeamertemplate{footline}[default]
+%\def\beamer@entrycode{\vspace*{-\headheight}}
+}{}
+
+% ------------- OTHER COMMANDS ------------- %
+
+\newcommand{\rmd}{{\rm d}}
+
+% ------------- BEGIN PRESENTATION ------------- %
+
+\selectlanguage{finnish}
+
+\begin{document}
+
+\input{all.tex}
+
+\end{document}
