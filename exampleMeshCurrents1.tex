@@ -1,0 +1,50 @@
+\pspicture*(-6,-2.1)(5,2.75)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-2){A1}
+\pnode(-2,-2){A2}
+\pnode(1,-2){A3}
+\pnode(4,-2){A4}
+
+\pnode(-4,2){B1}
+\pnode(-2,2){B2}
+\pnode(0,2){B3}
+\pnode(2,2){B4}
+\pnode(4,2){B5}
+
+\pnode(0,0.5){C3}
+\pnode(2,0.5){C4}
+
+\pnode(1,-0.75){D3}
+
+\pnode(1,0.5){E3}
+
+\Ucc[labelInside=2,
+intensity,
+intensitylabel=$I$,
+intensitylabeloffset=3mm,
+arrowscale=2 2,
+labeloffset=9mm](A4)(B5){2 V}
+
+\Ucc[labelInside=2,labeloffset=9mm](A3)(D3){1 V}
+
+\Ucc[labelInside=1,labeloffset=11mm,arrowscale=1.5 1.5,arrowinset=0](A1)(B1){50 mA}
+
+\resistor[labeloffset=5mm](B2)(B3){$100\,\Omega$}
+\resistor[labeloffset=5mm](B4)(B5){$50\,\Omega$}
+
+\resistor[labeloffset=8mm](A2)(B2){$100\,\Omega$}
+\resistor[labeloffset=7mm](C3)(B3){$10\,\Omega$}
+\resistor[labeloffset=7mm](C4)(B4){$10\,\Omega$}
+\resistor[labeloffset=6mm](D3)(E3){$1\,\Omega$}
+
+
+\wire(A1)(A4)
+\wire(B1)(B2)
+\wire(B3)(B4)
+\wire(C3)(C4)
+
+
+\endpspicture
