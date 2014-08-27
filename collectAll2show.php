@@ -24,11 +24,6 @@ if ($handle = opendir('.')) {
 
 file_put_contents('all.tex',$str);
 
-
-//shell_exec('pdflatex show.tex show.pdf');
-
-//die();
-
 $commands = array(
 'latex show.tex',
   'dvips show.dvi',
