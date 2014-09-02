@@ -1,0 +1,45 @@
+\pspicture*(-2.5,-2.2)(4.8,2.1)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-1.5){A1}
+\pnode(-4,0){B1}
+\pnode(-4,1.5){C1}
+
+\pnode(-1.33,-1.5){A2}
+\pnode(-1.33,0){B2}
+
+\pnode(-1.33,1.5){C2}
+
+\pnode(1.33,-1.5){A3}
+\pnode(1.33,0){B3}
+\pnode(1.33,1.5){C3}
+
+\pnode(4,-1.5){A4}
+\pnode(4,0){B4}
+\pnode(4,1.5){C4}
+
+\Ucc[labelInside=2,labeloffset=-8mm,arrowscale=1.5 1.5,arrowinset=0](A4)(A3){$U(t)$}
+
+\resistor[labeloffset=0mm](A2)(A3){$2\,\Omega$}
+
+%\Ucc[labelInside=1,labeloffset=10mm,arrowscale=1.5 1.5,arrowinset=0](A1)(B1){$I(t)$}
+
+\newcapacitor[labeloffset=8mm](A2)(B2){3 mF}
+
+\coil[dipolestyle=elektor,labeloffset=4mm](B2)(B4){2 mH}
+
+\wire[arrows=-o](A4)(C4)
+
+\wire[arrows=-o](B2)(C2)
+
+%\wire(B1)(B2)	
+%\wire(A1)(A2)
+
+\rput[cm](-0.93,1.5){+}
+\rput[cm](3.4,1.5){--}
+
+
+
+\endpspicture

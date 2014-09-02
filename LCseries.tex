@@ -1,0 +1,40 @@
+        \pspicture*(-5.5,-0.6)(5.5,1.1)
+
+		%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+		%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+		\pnode(-3,0){AA}
+		\pnode(-2,0){A}
+		\pnode(0,0){B}
+		\pnode(2,0){C}
+		\pnode(3,0){CC}
+		
+		\coil[dipolestyle=elektor,
+		tension,
+		tensionoffset=6mm,
+		tensionlabel=$U_{\rm L}$,
+		tensionlabeloffset=8mm,
+		tensioncolor=red,
+		intensity,
+		intensitycolor=blue,
+		intensitylabel=$I_{\rm L}$,
+		intensitylabeloffset=3mm,
+		arrowscale=1.5 1.5](B)(C){}
+
+		\capacitor[tension,
+		tensionoffset=6mm,
+		tensionlabel=$U_{\rm C}$,
+		tensionlabeloffset=8mm,
+		tensioncolor=olive,
+		intensity,
+		intensitycolor=blue,
+		intensitylabel=$I_{\rm C}$,
+		intensitylabeloffset=3mm,
+		arrowscale=1.5 1.5](A)(B){}
+
+		\wire[arrows=o-,arrowscale=1.5 1.5](AA)(A)
+		\wire[arrows=o-,arrowscale=1.5 1.5](CC)(C)
+		
+
+
+		\endpspicture
