@@ -1,0 +1,120 @@
+  \pspicture*(-5.5,-2)(5.5,2)
+
+%		\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%		\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+		\pnode(-5,-1){A1}
+		\pnode(-3.5,-1){A2}
+		\pnode(-5,1){B1}
+		\pnode(-4,1){B11}
+		\pnode(-3.5,1){B2}
+		
+		\pnode(-1,-1){A4}
+		\pnode(-2.5,-1){A3}
+		\pnode(-1,1){B4}
+		\pnode(-2.5,1){B3}		
+		\pnode(-2,1){B33}		
+	
+		\coil[dipolestyle=elektor,labeloffset=-3mm](B2)(A2){$L_1$}
+		\coil[dipolestyle=elektor,labeloffset=-3mm](A3)(B3){$L_2$}
+
+		\wire[arrows=-o](A2)(A1)
+		\wire[arrows=-o](B2)(B1)
+		\wire[arrows=->,arrowscale=2 2,arrowinset=0](B1)(B11)
+
+		\wire[arrows=-o](A3)(A4)
+		\wire[arrows=-o](B3)(B4)
+		\wire[arrows=->,arrowscale=2 2,arrowinset=0](B4)(B33)
+
+		\rput[cm](-5,0){
+		\begin{tabular}{@{}c@{}}
+		+\\
+		$U_1$\\		
+		--
+		\end{tabular}				
+		}
+
+		\rput[cm](-1,0){
+		\begin{tabular}{@{}c@{}}
+		+\\
+		$U_2$\\		
+		--
+		\end{tabular}				
+		}
+		
+		\rput[cm](-3.3,0.7){$\bullet$}
+		
+		\rput[cm](-2.7,0.7){$\bullet$}
+
+		\rput[cm](-3,1){$M$}
+
+		\rput[cm](-4.2,1.3){$I_1$}
+		
+		\rput[cm](-1.8,1.3){$I_2$}
+
+		\rput[cm](-3,-1.5){{\scriptsize 
+		\begin{tabular}{@{}c@{}}
+		Toistensa magneettikenttää\\vahvistavat käämit
+		\end{tabular}				
+		}}
+		% --
+
+		\pnode(1,-1){A1}
+		\pnode(2.5,-1){A2}
+		\pnode(1,1){B1}
+		\pnode(2,1){B11}
+		\pnode(2.5,1){B2}
+		
+		\pnode(5,-1){A4}
+		\pnode(3.5,-1){A3}
+		\pnode(5,1){B4}
+		\pnode(3.5,1){B3}		
+		\pnode(4,1){B33}		
+	
+		\coil[dipolestyle=elektor,labeloffset=-3mm](B2)(A2){$L_1$}
+		\coil[dipolestyle=elektor,labeloffset=-3mm](A3)(B3){$L_2$}
+
+		\wire[arrows=-o](A2)(A1)
+		\wire[arrows=-o](B2)(B1)
+		\wire[arrows=->,arrowscale=2 2,arrowinset=0](B1)(B11)
+
+		\wire[arrows=-o](A3)(A4)
+		\wire[arrows=-o](B3)(B4)
+		\wire[arrows=->,arrowscale=2 2,arrowinset=0](B4)(B33)
+
+		\rput[cm](1,0){
+		\begin{tabular}{@{}c@{}}
+		+\\
+		$U_1$\\		
+		--
+		\end{tabular}				
+		}
+
+		\rput[cm](5,0){
+		\begin{tabular}{@{}c@{}}
+		+\\
+		$U_2$\\		
+		--
+		\end{tabular}				
+		}
+		
+		\rput[cm](2.7,0.7){$\bullet$}
+		
+		\rput[cm](3.3,-0.7){$\bullet$}
+
+		\rput[cm](3,1){$M$}
+
+		\rput[cm](1.8,1.3){$I_1$}
+		
+		\rput[cm](4.2,1.3){$I_2$}
+
+		\rput[cm](3,-1.5){{\scriptsize 
+		\begin{tabular}{@{}c@{}}
+		Toistensa magneettikenttää\\heikentävät käämit
+		\end{tabular}				
+		}}
+
+
+
+
+		\endpspicture

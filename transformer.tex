@@ -1,0 +1,51 @@
+  \pspicture*(-5.5,-2)(5,2)
+
+		%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+		%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+		\pnode(-4.5,-1){A1}
+		\pnode(-2.5,-1){A2}
+		\pnode(-0.5,-1){A3}
+		\pnode(0.5,-1){A4}
+		\pnode(2.5,-1){A5}
+		\pnode(4.5,-1){A6}		
+
+		\pnode(-4.5,1){B1}
+		\pnode(-2.5,1){B2}
+		\pnode(-0.5,1){B3}
+		\pnode(0.5,1){B4}
+		\pnode(2.5,1){B5}
+		\pnode(4.5,1){B6}
+
+		\coil[dipolestyle=elektor,labeloffset=-4mm](B3)(A3){6~H}
+		\coil[dipolestyle=elektor,labeloffset=-4mm](A4)(B4){3~H}
+
+		
+		\rput[cm](-0.3,0.7){$\bullet$}
+		
+		\rput[cm](0.3,0.7){$\bullet$}
+
+		\rput[cm](0,1){$M$}
+
+\Ucc[labelInside=2,
+labeloffset=7mm](A1)(B1){$U$}
+
+\resistor[labeloffset=5mm](B2)(B3){$160~\Omega$}
+
+\resistor[labeloffset=5mm](B4)(B5){$50~\Omega$}
+
+\resistor[labeloffset=10mm](A6)(B6){$4000\,\Omega$}
+
+\coil[dipolestyle=rectangle,labeloffset=5mm](B1)(B2){$20+\j5\,\Omega$}
+
+\wire(B5)(B6)
+\wire(A1)(A3)
+\wire(B5)(B6)
+\wire(A4)(A6)
+
+\psframe[linestyle=dashed](-2.5,-1.5)(2.5,1.8)
+
+\rput[cm](0,-1.25){Lineaarinen muuntaja}
+
+
+		\endpspicture
