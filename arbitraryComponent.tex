@@ -1,0 +1,26 @@
+{\scriptsize
+
+        \pspicture*(-3.5,-0.6)(1.5,1.1)
+
+		%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+		%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+		\pnode(-3,0){AA}
+		\pnode(-2,0){A}
+		\pnode(0,0){B}
+		\pnode(1,0){C}
+		
+		{\footnotesize
+		\resistor[intensity,
+		intensitycolor=blue,
+		intensitylabel=$I(t)$,
+		intensitylabeloffset=4mm,
+		labeloffset=0mm,
+		arrowscale=1.5 1.5](A)(B){$\overline{Z}$}
+		}
+		\wire(AA)(A)
+		\wire(V)(C)
+		
+		\endpspicture
+		
+		}
