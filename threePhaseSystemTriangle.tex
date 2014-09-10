@@ -1,0 +1,98 @@
+\pspicture*(-4.1,-2.1)(7,3)
+
+\psset{linewidth=0.8pt}
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-1){A1}
+\pnode(-4,1){C1}
+
+\pnode(-3.5,-1){A2}
+\pnode(-3.5,0){B2}
+\pnode(-3.5,1){C2}
+\pnode(-3.5,2){D2}
+
+\pnode(-1.5,-1){A3}
+\pnode(-1.5,0){B3}
+\pnode(-1.5,1){C3}
+\pnode(-1.5,2){D3}
+
+\pnode(1,-1){A4}
+\pnode(1,0){B4}
+\pnode(1,1){C4}
+\pnode(1,2){D4}
+
+\pnode(3,-1){A5}
+\pnode(3,0){B5}
+\pnode(3,1){C5}
+\pnode(3,2){D5}
+
+\pnode(3.5,-1){A6}
+\pnode(3.5,1){C6}
+
+\wire[arrowscale=1.5 1.5,arrows=o-](A3)(A5)
+
+\resistor[labeloffset=0,
+intensity,
+intensitycolor=blue,
+arrowscale=1.5 1.5,
+labelangle=:U](C4)(B5){$\overline{Z}$}
+\resistor[labeloffset=0,
+intensity,
+intensitycolor=blue,
+arrowscale=1.5 1.5,
+labelangle=:U](B5)(D5){$\overline{Z}$}
+\resistor[labeloffset=0,
+intensity,
+intensitycolor=blue,
+arrowscale=1.5 1.5,
+labelangle=:U](D5)(C4){\rotatebox{180}{$\overline{Z}$}}
+
+\wire[arrowscale=1.5 1.5,arrows=o-](B3)(B5)
+\wire[arrowscale=1.5 1.5,arrows=o-](C3)(C4)
+\wire[arrowscale=1.5 1.5,arrows=o-](D3)(D5)
+
+\psline[linecolor=olive,arrowscale=1.5 1.5,arrowinset=0]{->}(-1.75,2)(-1.75,1)
+\rput[cm](-2.25,1.5){$\overline{U}_{\rm RS}$}
+
+\psline[linecolor=magenta,arrowscale=1.5 1.5,arrowinset=0]{->}(-1.75,1)(-1.75,0)
+\rput[cm](-2.25,0.5){$\overline{U}_{\rm ST}$}
+
+\psline[linecolor=cyan,arrowscale=1.5 1.5,arrowinset=0]{->}(-3,0)(-3,2)
+\rput[cm](-3.5,1){$\overline{U}_{\rm TR}$}
+
+\rput[cm](-1.5,-0.7){N}
+\rput[cm](-1.5,0.3){T}
+\rput[cm](-1.5,1.3){S}
+\rput[cm](-1.5,2.3){R}
+
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(-1,2)(-1,-1)
+\rput[lm](-0.9,1.5){$\overline{U}_{\rm R}$}
+
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(-0.5,1)(-0.5,-1)
+\rput[lm](-0.4,0.5){$\overline{U}_{\rm S}$}
+
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(0,0)(0,-1)
+\rput[lm](0.1,-0.5){$\overline{U}_{\rm T}$}
+
+\rput[lm](3.2,0.25){$\overline{I}_{\rm TR}$}
+\rput[lm](0.8,0.5){$\overline{I}_{\rm ST}$}
+\rput[cm](2.75,2.3){$\overline{I}_{\rm ST}$}
+
+% 
+
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(5.5,0)(6.755,0.336)
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(5.5,0)(4.581,0.919)
+\psline[linecolor=red,arrowscale=1.5 1.5,arrowinset=0]{->}(5.5,0)(5.164,-1.256)
+
+\psline[linecolor=olive,arrowscale=1.2 1.2,arrowinset=0]{->}(6.755,0.336)(5.164,-1.256)
+\psline[linecolor=magenta,arrowscale=1.2 1.2,arrowinset=0]{->}(5.164,-1.256)(4.581,0.919)
+\psline[linecolor=cyan,arrowscale=1.2 1.2,arrowinset=0]{->}(4.581,0.919)(6.755,0.336)
+
+\rput[cm](6.859,0.633){R}
+\rput[cm](5.369,-1.494){S}
+\rput[cm](4.271,0.860){T}
+
+
+\endpspicture

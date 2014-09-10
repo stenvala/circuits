@@ -1,0 +1,23 @@
+\pspicture*(-6,-2)(0.5,2.3)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-1.5){A1}
+\pnode(-4,1.5){B1}
+
+\pnode(-1.33,-1.5){A2}
+\pnode(-1.33,1.5){B2}
+
+\pnode(1.33,-1.5){A3}
+\pnode(1.33,1.5){B3}
+
+\pnode(4,-1.5){A4}
+\pnode(4,1.5){B4}
+
+\Ucc[labelInside=2,labeloffset=13mm](A1)(B1){$10\angle 0\degree$ V}
+\resistor[labeloffset=-5mm](B1)(B2){$2\angle90\degree\,\Omega$}
+\resistor[labeloffset=-10mm](A2)(B2){$5-\j3\,\Omega$}
+\resistor[labeloffset=5mm](A1)(A2){$5\angle 0\degree\,\Omega$}
+
+\endpspicture

@@ -1,0 +1,41 @@
+\pspicture*(-5.5,-2)(5,2)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-1.5){A1}
+\pnode(-4,1.5){B1}
+
+\pnode(-1.33,-1.5){A2}
+\pnode(-1.33,1.5){B2}
+
+\pnode(1.33,-1.5){A3}
+\pnode(1.33,0){C}
+\pnode(1.33,1.5){B3}
+
+\pnode(4,-1.5){A4}
+\pnode(4,1.5){B4}
+
+\resistor[labeloffset=-8mm](B1)(A1){$10\,\Omega$}
+\Ucc[labelInside=1,labeloffset=10mm,arrowscale=1.5 1.5,arrowinset=0](A2)(B2){10 A}
+\resistor[labeloffset=-8mm](B3)(C){$40\,\Omega$}
+\Ucc[labelInside=2,labeloffset=11mm](A3)(C){200 V}
+\resistor[labeloffset=-6mm,labeloffset=0mm](B3)(B4){$2\,\Omega$}
+
+\resistor[labeloffset=-6mm,
+tension,
+tensionlabel=$U$,
+tensioncolor=red,
+tensionlabeloffset=7mm,
+tensionoffset=5mm,
+intensity,
+intensitylabel=$I$,
+intensitycolor=blue,
+intensitylabeloffset=-3mm,
+arrowscale=2 2](B4)(A4){$R_{\rm L}$}
+
+
+\wire(B1)(B3)
+\wire(A1)(A4)
+
+\endpspicture

@@ -1,0 +1,32 @@
+\pspicture*(-5.5,-1.5)(5.5,1.5)
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-3,-1){A1}
+\pnode(-1,-1){A2}
+\pnode(1,-1){A3}
+\pnode(3,-1){A4}
+
+\pnode(-3,1){B1}
+\pnode(-1,1){B2}
+\pnode(1,1){B3}
+\pnode(3,1){B4}
+
+\Ucc[labelInside=1,labeloffset=10mm,arrowscale=1.5 1.5,arrowinset=0](A1)(B1){9 A}
+
+\resistor[labeloffset=0mm](B2)(B3){$2\,\Omega$}
+\resistor[labeloffset=0mm](A2)(A3){$4\,\Omega$}
+
+\resistor[labeloffset=8mm](A2)(B2){$12\,\Omega$}
+\resistor[labeloffset=6mm](A3)(B3){$9\,\Omega$}
+
+\wire(A1)(A2)
+\wire(B1)(B2)
+
+\wire[arrowscale=1.5 1.5,arrows=-o](B3)(B4)
+\wire[arrowscale=1.5 1.5,arrows=-o](A3)(A4)
+
+\rput[cm](3.5,1){a}
+\rput[cm](3.5,-1){b}
+
+\endpspicture
