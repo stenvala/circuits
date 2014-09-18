@@ -1,0 +1,26 @@
+\pspicture*(-6.7,-1.7)(4,1.8)
+
+%\psgrid[gridcolor=lightgray,subgriddiv=2,gridlabels=10pt](0,0)(-6,-4)(6,4)
+%\psaxes[labelFontSize=\scriptscriptstyle]{<->}(0,0)(-10,-10)(10,10)
+
+\pnode(-4,-1.5){A1}
+\pnode(-4,1.5){B1}
+
+\pnode(-1.33,-1.5){A2}
+\pnode(-1.33,1.5){B2}
+
+\pnode(1.33,-1.5){A3}
+\pnode(1.33,1.5){B3}
+
+\pnode(4,-1.5){A4}
+\pnode(4,1.5){B4}
+
+\Ucc[labelInside=2,labeloffset=16mm](A1)(B1){$120\angle30\degree$~V}
+\coil[dipolestyle=elektor,labeloffset=-3mm](B1)(B2){5 mH}
+\coil[dipolestyle=elektor,labeloffset=-3mm](B2)(B3){5 mH}
+\resistor[labeloffset=8mm](A2)(B2){$20\,\Omega$}
+\Ucc[labelInside=2,labeloffset=-15mm](A3)(B3){$100\angle0\degree$~V}
+
+\wire(A1)(A3)
+
+\endpspicture
